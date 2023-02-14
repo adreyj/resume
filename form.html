@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Registration Form</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+
+<script>
+
+function validateForm() {
+let passwordtext = document.forms["form"]["password"].value;
+let passwordtextError = document.forms["form"]["password"].value;
+  
+if (x < 8) {
+    ("Password must be at least 8 characters.");
+    return false;
+  }
+}
+</script>
+</head>
+<body bgcolor="lightgrey">
+ <div class="container">
+  <form id="form">
+   <h1>Registration Form</h1>
+   <label for="fname"><b>First Name</b></label>
+   <input type="text" placeholder="Enter First Name" name="fname" >
+
+   <label for="lname"><b>Last Name</b></label>
+   <input type="text" placeholder="Enter Last Name" name="lname">
+
+   <label for="nickname"><b>Nick Name</b></label>
+   <input type="text" placeholder="Enter Nick Name" name="nickname">
+
+   <label for="email"><b>Email</b></label>
+   <input type="email" placeholder="Enter Email" name="email" >
+
+   <label for="password"><b>Password</b></label>
+   <input type="password" placeholder="Enter Password" name="password">
+
+   <label for="dob"><b>Date of Birth (dd/mm/yyyy)</b></label>
+   <input type="date" placeholder="Enter Date of Birth" name="dob">
+
+   <label for="gender"><b>Gender</b></label>
+   <input type="radio" name="gender" value="male" > Male
+   <input type="radio" name="gender" value="female"> Female
+   <input type="radio" name="gender" value="other"> Other
+
+   <label for="phone"><b>Mobile Number</b></label>
+   <input type="tel" placeholder="Enter Mobile Number" name="phone">
+
+   <label for="address"><b>Address</b></label>
+   <textarea placeholder="Enter Address" name="address" required></textarea>
+
+   <div class="clearfix">
+    <button type="button" onclick ="return validateForm()" class="btn green">Submit</button>
+    <button type="button" onclick ="return validateForm()"class="btn red">Reset</button>
+   </div>
+  </form>
+ </div>
+
+</body>
+</html>
